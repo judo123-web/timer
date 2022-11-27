@@ -1,0 +1,29 @@
+<div class="main-wrapper">
+  <div class="main">
+    <p class="txt">{{ "დაელოდე LIVE გათამაშებას" | uppercase }}</p>
+    <div class="timer">
+      <div class="section hour">
+        <p>{{ hours }}</p>
+        <p>{{ "სთ" | uppercase }}</p>
+      </div>
+      <div class="section minute">
+        <p>{{ minutes }}</p>
+        <p>{{ "წთ" | uppercase }}</p>
+      </div>
+      <div class="section second">
+        <p>{{ seconds }}</p>
+        <p>{{ "წმ" | uppercase }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="iframe" *ngIf="isVideo">
+  <iframe
+    src="https://www.youtube.com/embed/kL5UmvzG8bA"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  >
+  </iframe>
+</div>
